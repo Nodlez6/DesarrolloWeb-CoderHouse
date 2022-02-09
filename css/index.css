@@ -1,0 +1,293 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: #F5C6A5;
+}
+.contenedor{
+    width: 90%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.fondo-nav{
+    background-color: #852747;
+    padding: 0.5rem 0;
+    
+    width: 100%;
+    border-bottom: .6rem solid #A2416B;
+    
+}
+.fondo-nav__container-nav{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+   
+}
+.nav_li_width{
+    width: 100%;
+    
+}
+
+.fondo-nav__container-nav__ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+@media (max-width: 600px) {
+    .fondo-nav{
+        height: 15rem;
+        
+    }
+    .nav_li_width{
+        width: 100%;
+        height: 8rem;
+    }
+    .fondo-nav__container-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      
+    }
+    .fondo-nav__container-nav__ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+   
+  }
+
+.fondo-nav__container-nav__ul li {
+    list-style: none;
+   
+}
+
+.fondo-nav__container-nav__ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500
+}
+
+
+.logo{
+    display: block;
+    margin: 0 auto;
+    height: 6rem;
+    width: 6rem;
+    background-color: #FF7777;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.banner{
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/banner.png);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner .banner-text{
+    color:black
+    
+}
+
+
+/* CONTACT */
+
+.card__contenedor{
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    width: 100%;
+    height: 95%;
+    background-color: #FAEEE7;
+    border-radius: 1rem;
+    
+    -webkit-box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.45); 
+box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.30);
+   
+}
+.card__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__img img{
+   width: 35%;
+   
+   
+   
+}
+
+.form{
+    height: 100%;
+    max-height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    column-gap: 4rem;
+    padding: 4rem;
+}
+
+@media(max-width: 768px) {
+    .form{
+        grid-template-columns: repeat(1 , 1fr);
+        
+    }
+    .form__inputs__text input{
+        margin-bottom: 4rem;
+    }
+    .form__textarea__mensaje textarea{
+        margin-bottom: 2rem;
+    }
+}
+
+.form__inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.form__inputs__text input{
+    width: 100%;
+    height: 2.5rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight:200;
+    
+}
+
+.form__inputs__text label{
+    display: inline-block;
+    
+    padding: 0.4rem;
+    background-color: #852747;
+    margin-bottom: 1rem;
+    border-radius: 0.6rem;
+    color: white;
+    font-weight: 600;
+    
+    
+}
+
+.form__inputs__text input:focus{
+    outline: 0;
+    border: 1px solid #FF7777;
+}
+.form__inputs__text input::placeholder{
+    font-size: 1rem;
+}
+
+
+.form__inputs__text input:hover{
+    outline: none;
+}
+.form__inputs__checkbox{
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="radio"] {
+    
+    width: 2rem;
+    height: 6rem;
+    background-color: red;
+}
+.form__inputs__checkbox_div{
+    display: grid;
+    grid-template-columns:  repeat(2 , 1fr);
+    column-gap: 1rem;
+}
+
+.form__inputs__checkbox_div label{
+    align-self: center;
+
+    padding: 0.5rem;
+    background-color: #852747;
+    border-radius: 0.8rem;
+    color: white;
+    font-weight: 600;
+
+}
+
+.form__textarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.form__textarea__mensaje label{
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #852747;
+    border-radius: 0.8rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+}
+.form__textarea__mensaje textarea{
+    display: inline-block;
+    width: 100%;
+    height: 25rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1rem;
+    font-weight:200;
+    resize: none;
+
+}
+
+.form__textarea__mensaje textarea:focus{
+    outline: 0;
+    border: 1px solid #FF7777;
+}
+.form__textarea__contenedor__button{
+    display: flex;
+    justify-content: flex-end;
+}
+.form__textarea__button{
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    color: white;
+    background-color: #852747;
+    outline: 0;
+    border: 0;
+    transition: background-color 0.2s;
+    
+}
+
+.form__textarea__button:hover{
+    background-color: #A2416B;
+}
+
