@@ -15,7 +15,7 @@ body{
 }
 .contenedor{
     width: 90%;
-    height: 100vh;
+    height: 120vh;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -291,3 +291,28 @@ input[type="radio"] {
     background-color: #A2416B;
 }
 
+.card-hover{
+    transition: transform 0.5s;
+}
+.card-hover:hover{
+    transform: scale(1.03);
+    
+}
+
+.servicios-title{
+    color: white;
+    background-color: #A2416B;
+    font-weight: 600;
+    padding: 0.5rem;
+    margin: 2rem 0;
+    
+}
+
+.footer-all{
+    display: block;
+    background-color: #852747;
+    width: 100%;
+    height: 5rem;
+    color: white;
+    font-weight: 600;
+}
