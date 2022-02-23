@@ -782,6 +782,27 @@ transition: transform 0.5s;
         grid-row: 2/3;
     }
 
+    .img__nosotros__equipo{
+        width: 100%;
+        height: 4rem;
+        background-image: none;
+        background-size: none;
+       
+        position: relative;
+        z-index: 1;
+       
+    }
+    .img__nosotros__mision{
+        width: 100%;
+        height: 4rem;
+        background-image: none;
+        background-size: none;
+       
+        position: relative;
+        z-index: 1;
+       
+    }
+
 
    
 }
