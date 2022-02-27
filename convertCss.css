@@ -376,8 +376,7 @@ input[type="radio"] {
       width: 2.8rem; } }
 
 .gradient-contenedor-nosotros {
-  width: 99.6vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
   height: 15rem;
   background-image: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e71059);
   position: relative; }
