@@ -1,5 +1,24 @@
+$colores-principales:( 
+	color1: #852747,
+	color2: #A2416B,
+	color3: #FF7777,
+);
 
 $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e71059);
+
+.nosotros-ext{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+@mixin sizes($width, $height){
+	height: $height;
+	width: $width;
+}
+
 
 * {
 	margin: 0;
@@ -24,8 +43,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   }
   
   .contenedor {
-	width: 90%;
-	height: 100vh;
+	@include sizes(90%,100vh);
 	max-width: 1200px;
 	margin: 0 auto;
   }
@@ -33,11 +51,10 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   /* MENÚ NAVEGACIÓN */
   
   .fondo-nav {
-	background-color: #852747;
+	background-color: map-get($colores-principales, color1);
 	padding: 0.5rem 0;
-	height: 7rem;
-	width: 100%;
-	border-bottom: .6rem solid #A2416B;
+	@include sizes(100%,7rem);
+	border-bottom: .6rem solid  map-get($colores-principales, color2);;
   }
   
   .fondo-nav__container-nav {
@@ -67,7 +84,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 		font-weight: 500;
   
 		&:hover {
-		  color: #FF7777;
+		  color: map-get($colores-principales, color3);
 		}
 	  }
 	}
@@ -77,9 +94,8 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 5rem;
-	width: 6rem;
-	background-color: #FF7777;
+	@include sizes(6rem,5rem);
+	background-color: map-get($colores-principales, color3);
 	border-radius: 50%;
 	color: white;
 	font-weight: bold;
@@ -104,8 +120,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	}
   
 	.nav_li_width {
-	  width: 100%;
-	  height: 8rem;
+	 @include sizes(100%,8rem);
 	}
   
 	.fondo-nav__container-nav {
@@ -147,16 +162,14 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   /* CONTACT */
   
   .card__contenedor {
-	width: 100%;
-	height: 100%;
+	@include sizes(100%,100%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
   }
   
   .card_contact {
-	width: 100%;
-	height: 95%;
+	@include sizes(100%,95%);
 	background-color: #FAEEE7;
 	border-radius: 1rem;
 	-webkit-box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.45);
@@ -209,8 +222,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
   .form__inputs__text {
 	input {
-	  width: 100%;
-	  height: 2.5rem;
+	  @include sizes(100%,2.5rem);
 	  padding: 1rem;
 	  border-radius: 0.8rem;
 	  border: none;
@@ -221,7 +233,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	label {
 	  display: inline-block;
 	  padding: 0.4rem;
-	  background-color: #852747;
+	  background-color: map-get($colores-principales, color1);;
 	  margin-bottom: 1rem;
 	  border-radius: 0.6rem;
 	  color: white;
@@ -231,7 +243,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	input {
 	  &:focus {
 		outline: 0;
-		border: 1px solid #FF7777;
+		border: 1px solid map-get($colores-principales, color3);
 	  }
   
 	  &::placeholder {
@@ -250,8 +262,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   }
   
   input[type="radio"] {
-	width: 2rem;
-	height: 6rem;
+	@include sizes(2rem,6rem);
 	background-color: red;
   }
   
@@ -263,7 +274,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	label {
 	  align-self: center;
 	  padding: 0.5rem;
-	  background-color: #852747;
+	  background-color: map-get($colores-principales, color1);;
 	  border-radius: 0.8rem;
 	  color: white;
 	  font-weight: 600;
@@ -280,7 +291,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	label {
 	  display: inline-block;
 	  padding: 0.5rem;
-	  background-color: #852747;
+	  background-color: map-get($colores-principales, color1);;
 	  border-radius: 0.8rem;
 	  color: white;
 	  font-weight: 600;
@@ -289,8 +300,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
 	textarea {
 	  display: inline-block;
-	  width: 100%;
-	  height: 200%;
+	  @include sizes(100%,200%);
 	  padding: 1rem;
 	  border-radius: 0.8rem;
 	  border: none;
@@ -305,7 +315,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	padding: 1rem 2rem;
 	border-radius: 0.4rem;
 	color: white;
-	background-color: #852747;
+	background-color: map-get($colores-principales, color1);;
 	outline: 0;
 	border: 0;
 	transition: background-color 0.2s;
@@ -314,7 +324,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
   .form__textarea__mensaje textarea:focus {
 	outline: 0;
-	border: 1px solid #FF7777;
+	border: 1px solid map-get($colores-principales, color3);
   }
   
   .form__textarea__contenedor__button {
@@ -323,7 +333,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   }
   
   .form__textarea__button:hover {
-	background-color: #A2416B;
+	background-color:  map-get($colores-principales, color2);
   }
   
   @media (max-width: 600px) {
@@ -344,16 +354,15 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   /* Seervicios */
   
   .card {
-	height: 25rem;
-	width: 20rem;
+	@include sizes(20rem,25rem);
 	border-radius: 1rem;
 	padding: 1rem;
-	border: 0.25rem solid #A2416B;
+	border: 0.25rem solid  map-get($colores-principales, color2);
 	background-color: #FDEFF4;
   
 	img {
 	  width: 10rem;
-	  background-color: #FF7777;
+	  background-color: map-get($colores-principales, color3);
 	  border-radius: 50%;
 	  padding: 1rem;
 	}
@@ -369,15 +378,14 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
   .servicios-title {
 	color: white;
-	background-color: #A2416B;
+	background-color:  map-get($colores-principales, color2);
 	font-weight: 600;
 	padding: 0.5rem;
 	margin: 2rem 0;
   }
   
   .gradient-contenedor {
-	width: 100%;
-	height: 25rem;
+	@include sizes(100%,25rem);
 	background-image: $gradient;
 	position: relative;
   }
@@ -605,7 +613,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
 	  &:first-child {
 		width: 6rem;
-		background-color: #852747;
+		background-color: map-get($colores-principales, color1);;
 		border-radius: 50%;
 		padding: .5rem;
 	  }
@@ -666,12 +674,8 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   }
   
   .img__nosotros__equipo {
-	width: 100%;
-	height: 100%;
+	@extend .nosotros-ext;
 	background-image: url("/assets/about-us/trabajo-en-equipo.png");
-	background-size: cover;
-	position: relative;
-	z-index: 1;
   
 	&::after {
 	  content: "";
@@ -687,13 +691,9 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   }
   
   .img__nosotros__mision {
-	width: 100%;
-	height: 100%;
+	@extend .nosotros-ext;
 	background-image: url("/assets/about-us/motivacion.png");
-	background-size: cover;
-	position: relative;
-	z-index: 1;
-  
+
 	&::after {
 	  content: "";
 	  position: absolute;
@@ -773,13 +773,13 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
   .footer-all {
 	display: inline-block;
-	background-color: #852747;
+	background-color: map-get($colores-principales, color1);;
 	width: 100%;
 	bottom: 0;
 	height: 100%;
 	color: white;
 	font-weight: 600;
-	border-top: .6rem solid #A2416B;
+	border-top: .6rem solid  map-get($colores-principales, color2);
   }
   
   .contenedor-contenido-footer {
@@ -812,7 +812,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	  cursor: pointer;
 	  width: 9rem;
 	  height: 3rem;
-	  background-color: #A2416B;
+	  background-color:  map-get($colores-principales, color2);
 	  color: white;
 	  text-decoration: none;
 	}
