@@ -651,3 +651,56 @@ input[type="radio"] {
     margin-bottom: 1rem; }
   .footer-empresa a {
     margin-bottom: 1rem; } }
+
+/* PRODUCTS */
+.contenedor-pro {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.contenedor-products {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0; }
+  .contenedor-products .grid-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem; }
+    .contenedor-products .grid-products .card-product {
+      padding: 1rem;
+      width: 23rem;
+      height: 26rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 0.25rem solid #A2416B;
+      background-color: #FDEFF4;
+      border-radius: 1rem;
+      transition: transform 0.5s; }
+      .contenedor-products .grid-products .card-product img {
+        width: 10rem;
+        background-color: #FF7777;
+        border-radius: 50%;
+        padding: 1rem; }
+      .contenedor-products .grid-products .card-product:hover {
+        transform: scale(1.03); }
+      .contenedor-products .grid-products .card-product .card-product-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .contenedor-products .grid-products .card-product .card-product-body a {
+          cursor: pointer;
+          text-decoration: none;
+          background-color: #852747;
+          color: white;
+          width: 10rem;
+          text-align: center;
+          padding: 0.5rem;
+          border-radius: 2px; }
+  @media (max-width: 600px) {
+    .contenedor-products .grid-products {
+      grid-template-columns: repeat(1, 1fr); } }
