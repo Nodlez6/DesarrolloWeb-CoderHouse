@@ -3,8 +3,8 @@
 Nombre empresa: **Sury**
 
 Nombre: _Sebastián Gallardo_  
-Dirección: Boyen 4532 
-Contacto: Sebastián Andrés Gallardo Luna 
+Dirección: Boyen 4532  
+Contacto: Sebastián Andrés Gallardo Luna  
 
 | Etapa | Descripción                            | Precio total |
 |-------|----------------------------------------|--------------|
