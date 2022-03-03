@@ -2,7 +2,7 @@
 
 Nombre empresa: **Sury**
 
-Nombre: _Sebastián Gallardo_ 
+Nombre: _Sebastián Gallardo_  
 Dirección: Boyen 4532 
 Contacto: Sebastián Andrés Gallardo Luna 
 
