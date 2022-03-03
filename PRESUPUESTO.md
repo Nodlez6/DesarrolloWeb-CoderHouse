@@ -1,5 +1,11 @@
 # Presupuesto
 
+Nombre empresa: **Sury**
+
+Nombre: _Sebastián Gallardo_
+Dirección: Boyen 4532
+Contacto: Sebastián Andrés Gallardo Luna
+
 | Etapa | Descripción                            | Precio total |
 |-------|----------------------------------------|--------------|
 | 1     | Toma de requerimientos e instalaciones | $50.000 CLP  |
@@ -7,7 +13,8 @@
 | 3     | Desarrollo del sistema                 | $100.000 CLP |
 | 4     | Implantación del sistema y servidores  | $50.000 CLP  |
 | 5     | Soporte continuo del sistema.          | $20.000 CLP  |
-|       | Total                                  | $420.000 CLP |
+|       | IVA                                    | $79.800 CLP  |
+|       | Total                                  | $499800 CLP  |
 
 * Herramientas de desarrollo
     * Se utilizará figma para los mockups.
