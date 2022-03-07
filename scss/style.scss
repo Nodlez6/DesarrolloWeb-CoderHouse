@@ -160,10 +160,16 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   /*********************/
   
   /* CONTACT */
+
+  .contenedor-con{
+	max-width: 1200px;
+	margin: 0 auto;
+  }
   
   .card__contenedor {
 	@include sizes(100%,100%);
 	display: flex;
+	margin: 5rem 0;
 	justify-content: center;
 	align-items: center;
   }
@@ -189,14 +195,16 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   
   .form {
 	height: 100%;
-	max-height: 60%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 4rem;
-	padding: 4rem;
+	padding: 3rem;
   }
   
   @media (max-width: 600px) {
+	.contenedor-con{
+		padding: 1rem;
+	}
 	.card__contenedor {
 	  height: 110%;
 	}
@@ -234,7 +242,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	  display: inline-block;
 	  padding: 0.4rem;
 	  background-color: map-get($colores-principales, color1);;
-	  margin-bottom: 1rem;
+	  margin: 1rem 1rem;
 	  border-radius: 0.6rem;
 	  color: white;
 	  font-weight: 600;
@@ -285,6 +293,16 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	textarea {
+		height: 10rem;
+		padding: 1rem;
+		border-radius: 0.8rem;
+		border: none;
+		font-size: 1rem;
+		font-weight: 200;
+		resize: none;
+	}
   }
   
   .form__textarea__mensaje {
@@ -296,17 +314,6 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	  color: white;
 	  font-weight: 600;
 	  margin-bottom: 1rem;
-	}
-  
-	textarea {
-	  display: inline-block;
-	  @include sizes(100%,200%);
-	  padding: 1rem;
-	  border-radius: 0.8rem;
-	  border: none;
-	  font-size: 1rem;
-	  font-weight: 200;
-	  resize: none;
 	}
   }
   
@@ -322,7 +329,7 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
 	margin-top: 2rem;
   }
   
-  .form__textarea__mensaje textarea:focus {
+  .form__textarea textarea:focus {
 	outline: 0;
 	border: 1px solid map-get($colores-principales, color3);
   }
@@ -337,17 +344,8 @@ $gradient: linear-gradient(to right top, #7f4860, #994364, #b43a64, #ce2c61, #e7
   }
   
   @media (max-width: 600px) {
-	.form__textarea__mensaje textarea {
-	  height: 100%;
-	  margin: 0;
-	}
-  
 	.card__img img {
 	  width: 0;
-	}
-  
-	.form__textarea__button {
-	  margin-top: 5rem;
 	}
   }
   

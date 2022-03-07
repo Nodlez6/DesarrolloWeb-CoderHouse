@@ -111,10 +111,15 @@ body {
 
 /*********************/
 /* CONTACT */
+.contenedor-con {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .card__contenedor {
   height: 100%;
   width: 100%;
   display: flex;
+  margin: 5rem 0;
   justify-content: center;
   align-items: center; }
 
@@ -136,13 +141,14 @@ body {
 
 .form {
   height: 100%;
-  max-height: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
-  padding: 4rem; }
+  padding: 3rem; }
 
 @media (max-width: 600px) {
+  .contenedor-con {
+    padding: 1rem; }
   .card__contenedor {
     height: 110%; }
   .form {
@@ -170,7 +176,7 @@ body {
   display: inline-block;
   padding: 0.4rem;
   background-color: #852747;
-  margin-bottom: 1rem;
+  margin: 1rem 1rem;
   border-radius: 0.6rem;
   color: white;
   font-weight: 600; }
@@ -210,6 +216,14 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  .form__textarea textarea {
+    height: 10rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 200;
+    resize: none; }
 
 .form__textarea__mensaje label {
   display: inline-block;
@@ -219,17 +233,6 @@ input[type="radio"] {
   color: white;
   font-weight: 600;
   margin-bottom: 1rem; }
-
-.form__textarea__mensaje textarea {
-  display: inline-block;
-  height: 200%;
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  border: none;
-  font-size: 1rem;
-  font-weight: 200;
-  resize: none; }
 
 .form__textarea__button {
   font-size: 1.3rem;
@@ -242,7 +245,7 @@ input[type="radio"] {
   transition: background-color 0.2s;
   margin-top: 2rem; }
 
-.form__textarea__mensaje textarea:focus {
+.form__textarea textarea:focus {
   outline: 0;
   border: 1px solid #FF7777; }
 
@@ -254,13 +257,8 @@ input[type="radio"] {
   background-color: #A2416B; }
 
 @media (max-width: 600px) {
-  .form__textarea__mensaje textarea {
-    height: 100%;
-    margin: 0; }
   .card__img img {
-    width: 0; }
-  .form__textarea__button {
-    margin-top: 5rem; } }
+    width: 0; } }
 
 /* Seervicios */
 .card {
